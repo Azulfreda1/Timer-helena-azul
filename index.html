@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En Couple Depuis</title>
+    <title>En couple depuis</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,42 +13,42 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
             height: 100vh;
             background-color: #f5f5f5;
+            text-align: center;
         }
         h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
-        }
-        #timer {
             font-size: 2em;
-            margin: 20px 0;
-            color: #16a085;
+            margin-bottom: 20px;
+            color: #444;
         }
-        .photos {
+        .images {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 80%;
-            max-width: 800px;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 30px;
         }
-        .photos img {
-            width: 40%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .images img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #aaa;
+        }
+        .timer {
+            font-size: 1.5em;
+            color: #222;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-
-    <h1>En couple depuis :</h1>
-    <div id="timer">Calcul en cours...</div>
-    <div class="photos">
-        <img src="URL_PHOTO_TOI" alt="Photo de toi">
-        <img src="URL_PHOTO_COPINE" alt="Photo de ta copine">
+    <h1>En couple depuis</h1>
+    <div class="images">
+        <img src="https://raw.githubusercontent.com/Azulfreda1/Timer-helena-azul/main/IMG_C68D856056A5-1.jpeg" alt="Photo de toi">
+        <img src="https://raw.githubusercontent.com/Azulfreda1/Timer-helena-azul/main/IMG_3792.PNG" alt="Photo de ta copine">
     </div>
+    <div class="timer" id="timer">0 jours, 0 heures, 0 minutes et 0 secondes</div>
 
     <script>
         function updateTimer() {
@@ -65,10 +65,9 @@
                 `${days} jours, ${hours} heures, ${minutes} minutes et ${seconds} secondes`;
         }
 
-        // Mettre à jour le timer toutes les secondes
+        // Met à jour le timer toutes les secondes
         setInterval(updateTimer, 1000);
-        updateTimer();
+        updateTimer(); // Initialisation immédiate
     </script>
-
 </body>
 </html>
